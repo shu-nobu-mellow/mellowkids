@@ -1,0 +1,8 @@
+# メロウキッズ robots.txt
+User-agent: *
+Allow: /
+
+# 管理・テスト系を将来的に除外する場合の例:
+# Disallow: /wp-admin/
+
+Sitemap: https://example.com/sitemap.xml

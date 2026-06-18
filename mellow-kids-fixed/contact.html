@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問い合わせ・見学予約｜メロウキッズ</title>
+<meta name="description" content="メロウキッズへのお問い合わせ・見学/体験のご予約はこちらから。電話・LINEでもご相談いただけます。">
+<link rel="stylesheet" href="site.css">
+</head>
+<body data-page="contact">
+<header id="site-header"></header>
+
+<main>
+  <section class="page-hero">
+    <div class="dot-grid" style="top:20px;right:40px"></div>
+    <div class="wrap" style="position:relative;z-index:1">
+      <nav class="crumbs" aria-label="パンくずリスト"><ol><li><a href="index.html">ホーム</a></li><li aria-current="page">お問い合わせ・見学予約</li></ol></nav>
+      <div class="en">Contact</div>
+      <h1>お問い合わせ・見学予約</h1>
+      <p class="lead">「まず話を聞いてみたい」だけでも大丈夫。<br>お気軽にご連絡ください。</p>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--c-cream)">
+    <div class="wrap">
+      <div class="layout-sidebar layout-sidebar--form">
+        <form class="card" style="padding:34px" onsubmit="return false">
+          <h2 class="h3" style="font-size:22px;margin-bottom:20px">見学・体験 予約フォーム</h2>
+          <div class="stack gap-24">
+            <div><label class="field-label" for="f-name">お名前 <span class="req">必須</span></label><input class="input" type="text" id="f-name" name="name" required autocomplete="name" placeholder="例）奄美 はな"></div>
+            <div class="grid cols-2" style="gap:18px">
+              <div><label class="field-label" for="f-age">お子さんの年齢</label><input class="input" type="text" id="f-age" name="child_age" placeholder="例）3歳"></div>
+              <div><label class="field-label" for="f-tel">電話番号 <span class="req">必須</span></label><input class="input" type="tel" id="f-tel" name="tel" required autocomplete="tel" placeholder="090-1234-5678"></div>
+            </div>
+            <div><label class="field-label" for="f-email">メールアドレス</label><input class="input" type="email" id="f-email" name="email" autocomplete="email" placeholder="email@example.com"></div>
+            <div><label class="field-label" for="f-date">ご希望の日時</label><input class="input" type="text" id="f-date" name="preferred_date" placeholder="例）平日の午前中"></div>
+            <div><label class="field-label" for="f-msg">ご相談内容</label><textarea class="textarea" id="f-msg" name="message" placeholder="お子さんの様子や、気になっていることなど、ご自由にお書きください。"></textarea></div>
+            <button class="btn btn--cta" type="submit" style="align-self:flex-start">この内容で送信する</button>
+            <p class="muted" style="margin:0;font-size:13px">※送信後X営業日以内にご連絡します。<a href="privacy.html" style="color:var(--c-primary-d);text-decoration:underline">プライバシーポリシー</a>に同意のうえ送信してください。</p>
+          </div>
+        </form>
+
+        <aside class="stack gap-24">
+          <div class="card" style="background:var(--c-primary-soft);border-color:transparent">
+            <div class="field-label" style="font-size:13px;color:var(--c-primary-dd)">お電話でのご相談</div>
+            <a href="tel:0997-58-5511" style="font-family:var(--font-head);font-weight:900;font-size:26px;color:var(--c-primary-dd)">0997-58-5511</a>
+            <p class="muted" style="margin:6px 0 0;font-size:14px">受付：平日 9:00–17:00</p>
+          </div>
+          <div class="card stack gap-12">
+            <div class="field-label" style="font-size:13px">LINEで相談</div>
+            <div class="imgframe ar-11 r-md" style="width:140px"><div class="img-pending" role="img" aria-label="QRコード"><span>QRコード</span></div></div>
+            <p class="muted" style="margin:0;font-size:14px">友だち追加で、チャットからもご相談いただけます。</p>
+          </div>
+          <div class="card stack gap-12">
+            <div class="field-label" style="font-size:13px">アクセス</div>
+            <p class="muted" style="margin:0;font-size:14px">鹿児島県奄美市 …<br>平日 9:00–17:00 / 土 9:00–13:00</p>
+            <a class="btn btn--ghost btn--sm" href="access.html" style="align-self:flex-start">地図を見る →</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="site.js"></script>
+</body>
+</html>
