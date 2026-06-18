@@ -2,7 +2,7 @@
    メロウキッズ — site.css
    児童発達支援事業所｜本デザイン（A案ベース）
    ========================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Quicksand:wght@500;600;700&family=Yomogi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Quicksand:wght@500;600;700&display=swap');
 
 :root{
   /* brand */
@@ -12,8 +12,10 @@
   --c-primary-soft:#E9F6F9;
   --c-primary-tint:#F2FAFC;
   /* accent (上書き：tweak) */
-  --c-accent:#F0917C;
-  --c-accent-d:#E07A63;
+  --c-accent:#F0917C;          /* 装飾用(白文字は載せない) */
+  --c-accent-btn:#C7502E;      /* ボタン背景: 白文字で4.55:1 */
+  --c-accent-btn-d:#BC4A28;    /* hover: 5.06:1 */
+  --c-accent-d:#AD4730;        /* 淡背景上の文字: 5.0:1 */
   --c-accent-soft:#FCEFEA;
   --c-sun:#F4C76B;
   /* neutrals — warm */
@@ -44,7 +46,7 @@
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
 body{
   margin:0;background:var(--c-cream);color:var(--c-ink);
   font-family:var(--font-body);font-size:16px;line-height:1.95;
@@ -58,15 +60,15 @@ a{color:inherit;text-decoration:none}
 
 /* ---------- typography ---------- */
 h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.45;margin:0;color:var(--c-ink);letter-spacing:.01em;
-  word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
-.display{font-size:clamp(32px,4vw,46px);font-weight:900;line-height:1.36;letter-spacing:.02em;text-wrap:balance}
+  word-break:normal;overflow-wrap:normal}
+.display{font-size:clamp(38px,5vw,58px);font-weight:900;line-height:1.32;letter-spacing:.02em;text-wrap:balance}
 .h2{font-size:clamp(26px,3.4vw,38px);font-weight:900}
 .h3{font-size:clamp(20px,2.4vw,25px)}
 .eyebrow{font-family:var(--font-en);font-weight:600;font-size:14px;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--c-primary-d);display:inline-flex;align-items:center;gap:10px}
+  text-transform:uppercase;color:var(--c-primary-dd);display:inline-flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;border-radius:2px;background:currentColor;display:inline-block}
 .eyebrow.center::after{content:"";width:24px;height:2px;border-radius:2px;background:currentColor;display:inline-block}
-.lead{font-size:clamp(16px,1.5vw,18px);color:var(--c-ink-2);line-height:2.1;word-break:keep-all;overflow-wrap:anywhere}
+.lead{font-size:clamp(16px,1.5vw,18px);color:var(--c-ink-2);line-height:2.1;word-break:normal;overflow-wrap:normal}
 .jp-mark{color:var(--c-accent-d)}
 .kicker-jp{font-family:var(--font-head);color:var(--c-primary-d);font-weight:700;font-size:15px}
 
@@ -75,10 +77,10 @@ h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.45;margin
   font-size:16px;padding:15px 30px;border-radius:var(--pill);border:2px solid transparent;cursor:pointer;
   transition:transform .15s ease, box-shadow .15s ease, background .15s ease;white-space:nowrap}
 .btn .ic{width:18px;height:18px;display:inline-block}
-.btn--cta{background:var(--c-accent);color:#fff;box-shadow:0 14px 24px -14px var(--c-accent-d)}
-.btn--cta:hover{transform:translateY(-2px);box-shadow:0 18px 30px -14px var(--c-accent-d);background:var(--c-accent-d)}
-.btn--sea{background:var(--c-primary-d);color:#fff;box-shadow:0 14px 24px -14px var(--c-primary-dd)}
-.btn--sea:hover{transform:translateY(-2px);background:var(--c-primary-dd)}
+.btn--cta{background:var(--c-accent-btn);color:#fff;box-shadow:0 14px 24px -14px var(--c-accent-btn-d)}
+.btn--cta:hover{transform:translateY(-2px);box-shadow:0 18px 30px -14px var(--c-accent-btn-d);background:var(--c-accent-btn-d)}
+.btn--sea{background:var(--c-primary-dd);color:#fff;box-shadow:0 14px 24px -14px rgba(0,0,0,.35)}
+.btn--sea:hover{transform:translateY(-2px);background:#18596A}
 .btn--ghost{background:#fff;color:var(--c-ink);border-color:var(--c-line)}
 .btn--ghost:hover{border-color:var(--c-primary);color:var(--c-primary-d);transform:translateY(-2px)}
 .btn--sm{font-size:14px;padding:11px 22px}
@@ -92,7 +94,7 @@ h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.45;margin
   font-weight:700;border-radius:var(--pill);font-size:14px;letter-spacing:.03em;overflow:hidden;
   border:2.5px solid var(--c-accent);background:#fff;transform:rotate(-1.5deg);box-shadow:0 14px 28px -14px var(--c-accent-d)}
 .badge-open .seg{display:inline-flex;align-items:center;gap:7px;padding:8px 18px;white-space:nowrap}
-.badge-open .seg--date{background:var(--c-accent);color:#fff;font-family:var(--font-en);border-radius:0 var(--pill) var(--pill) 0}
+.badge-open .seg--date{background:var(--c-accent-btn);color:#fff;font-family:var(--font-en);border-radius:0 var(--pill) var(--pill) 0}
 .badge-open .seg--date b{font-family:var(--font-head);font-size:1.15em}
 .badge-open .seg--recruit{background:#fff;color:var(--c-accent-d);font-family:var(--font-head)}
 @media (prefers-reduced-motion: no-preference){
@@ -110,7 +112,8 @@ h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.45;margin
 .section--tint{background:var(--c-primary-tint)}
 .section--soft{background:var(--c-primary-soft)}
 .section--cream{background:var(--c-cream-2)}
-.section--sea{background:linear-gradient(160deg,var(--c-primary-d),var(--c-primary-dd));color:#fff}
+.section--sea{background:linear-gradient(160deg,#27798F,var(--c-primary-dd));color:#fff}
+.section--sea .lead{color:#fff!important} /* HTML側のインライン薄色(#d8f1f6等)をAA対応で上書き。WP化時にインライン削除→この行も削除 */
 .section--sea h2,.section--sea h3{color:#fff}
 .sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:44px}
 .sec-head.center{align-items:center;text-align:center}
@@ -168,9 +171,9 @@ image-slot{position:absolute;inset:0;width:100%!important;height:100%!important}
 .brand .mark{width:auto;height:50px;background:transparent;
   display:grid;place-items:center;overflow:visible}
 .brand .mark img{width:auto;height:50px;display:block}
-.brand .name{display:flex;flex-direction:column;line-height:1.15;white-space:nowrap}
+.brand .name{display:flex;flex-direction:column;align-items:center;line-height:1.15;white-space:nowrap}
 .brand .name b{font-family:var(--font-head);font-weight:900;font-size:20px;letter-spacing:.02em}
-.brand .name small{font-size:11px;color:var(--c-ink-2);letter-spacing:.14em;font-family:var(--font-en);font-weight:600}
+.brand .name small{font-size:11px;color:var(--c-ink-2);letter-spacing:.14em;font-family:var(--font-en);font-weight:600;text-align:center}
 .brand .wm-img{height:23px;width:auto;display:block;margin-bottom:3px}
 .nav{display:flex;align-items:center;gap:4px;margin-left:auto}
 .nav a{font-family:var(--font-head);font-weight:700;font-size:14px;color:var(--c-ink);padding:8px 11px;border-radius:var(--pill);
@@ -190,6 +193,10 @@ image-slot{position:absolute;inset:0;width:100%!important;height:100%!important}
 /* ---------- page hero (subpages) ---------- */
 .page-hero{background:var(--c-primary-soft);padding:56px 0 64px;position:relative;overflow:hidden}
 .page-hero .crumbs{font-size:13px;color:var(--c-ink-2);font-family:var(--font-en);font-weight:600;letter-spacing:.06em;margin-bottom:16px}
+.page-hero .crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:2px}
+.page-hero .crumbs li{display:flex;align-items:center}
+.page-hero .crumbs li:not(:first-child)::before{content:"／";margin:0 8px;color:var(--c-ink-3);font-weight:400}
+.page-hero .crumbs li[aria-current="page"]{color:var(--c-ink-3)}
 .page-hero .crumbs a:hover{color:var(--c-primary-d)}
 .page-hero h1{font-size:clamp(30px,4.4vw,46px);font-weight:900}
 .page-hero .en{font-family:var(--font-en);font-weight:600;color:var(--c-primary-d);letter-spacing:.2em;text-transform:uppercase;font-size:14px;margin-bottom:10px}
@@ -225,20 +232,20 @@ image-slot{position:absolute;inset:0;width:100%!important;height:100%!important}
 
 /* ---------- form ---------- */
 .field-label{font-family:var(--font-head);font-weight:700;font-size:14px;margin-bottom:8px;display:flex;gap:8px;align-items:center}
-.field-label .req{font-size:11px;color:#fff;background:var(--c-accent);border-radius:5px;padding:1px 7px;font-family:var(--font-en)}
+.field-label .req{font-size:11px;color:#fff;background:var(--c-accent-btn);border-radius:5px;padding:1px 7px;font-family:var(--font-en)}
 .input,.textarea,.select{width:100%;font-family:var(--font-body);font-size:15px;color:var(--c-ink);
-  background:#fff;border:1.5px solid var(--c-line);border-radius:14px;padding:13px 15px}
-.input:focus,.textarea:focus,.select:focus{outline:none;border-color:var(--c-primary)}
+  background:#fff;border:1.5px solid #9A9183;border-radius:14px;padding:13px 15px}
+.input:focus,.textarea:focus,.select:focus{outline:none;border-color:var(--c-primary-d);box-shadow:0 0 0 3px var(--c-primary-soft)}
 .textarea{min-height:130px;resize:vertical}
 
 /* ---------- footer ---------- */
-.site-footer{background:var(--c-primary-dd);color:#dff1f5}
+.site-footer{background:var(--c-primary-dd);color:#e8f6fa}
 .site-footer .top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding:60px 0 44px}
 .site-footer .brand .name b{color:#fff}
-.site-footer .brand .name small{color:#bfe3eb}
+.site-footer .brand .name small{color:#dff1f5}
 .site-footer .mark{background:transparent}
 .site-footer .mark img{height:48px}
-.site-footer p{color:#bfe3eb;font-size:14px;line-height:1.9}
+.site-footer p{color:#dff1f5;font-size:14px;line-height:1.9}
 .site-footer h4{color:#fff;font-size:15px;margin-bottom:14px}
 .foot-links{display:flex;flex-direction:column;gap:9px;font-size:14px}
 .foot-links a{white-space:nowrap}
@@ -249,7 +256,7 @@ image-slot{position:absolute;inset:0;width:100%!important;height:100%!important}
 .site-footer .sns a svg{width:18px;height:18px}
 .site-footer .sns a:hover{background:#fff;border-color:#fff;color:var(--c-primary-dd)}
 .site-footer .bottom{border-top:1px solid rgba(255,255,255,.16);padding:18px 0;display:flex;justify-content:space-between;
-  flex-wrap:wrap;gap:10px;font-size:12.5px;color:#a9d6e0;font-family:var(--font-en)}
+  flex-wrap:wrap;gap:10px;font-size:12.5px;color:#e8f6fa;font-family:var(--font-en)}
 
 /* ---------- utilities ---------- */
 .stack{display:flex;flex-direction:column}
@@ -269,7 +276,13 @@ image-slot{position:absolute;inset:0;width:100%!important;height:100%!important}
 .mobile-cta .btn{width:100%;justify-content:center;padding:13px 10px;font-size:15px;white-space:nowrap}
 
 /* ---------- hero wordmark ---------- */
-.hero-wm{height:clamp(92px,11vw,132px);width:auto;display:block;margin-bottom:6px;max-width:100%;object-fit:contain}
+.hero-logo{display:inline-flex;flex-direction:column;align-items:stretch;margin-bottom:6px}
+.hero-wm{height:clamp(78px,9vw,112px);width:auto;display:block;max-width:100%;object-fit:contain}
+.hero-wm-en{display:flex;justify-content:center;gap:1.2em;width:100%;
+  font-family:var(--font-en);font-weight:700;color:#71E4FF;
+  font-size:clamp(16px,2.1vw,24px);letter-spacing:.32em;
+  padding:6px 4px 0;box-sizing:border-box;line-height:1}
+.hero-wm-en span{flex:0 0 auto}
 
 /* ---------- responsive ---------- */
 @media(max-width:1160px){
@@ -296,3 +309,49 @@ image-slot{position:absolute;inset:0;width:100%!important;height:100%!important}
   .btn-row .btn{width:auto}
   .btn-row{flex-direction:column}
 }
+
+/* ---------- a11y: 本文中のリンクは下線で識別 ---------- */
+main p a:not(.btn){text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- 2カラム(本文+サイドバー)レイアウト ---------- */
+.layout-sidebar{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start}
+.layout-sidebar--form{grid-template-columns:1.5fr 1fr}
+@media(max-width:820px){
+  .layout-sidebar,.layout-sidebar--form{grid-template-columns:1fr;gap:32px}
+}
+
+/* ---------- 写真・地図 未確定プレースホルダ ---------- */
+.img-pending{width:100%;height:100%;min-height:200px;display:flex;align-items:center;justify-content:center;
+  background:repeating-linear-gradient(45deg,var(--c-primary-soft),var(--c-primary-soft) 12px,#fff 12px,#fff 24px);
+  color:var(--c-primary-dd);font-size:14px;font-weight:600;text-align:center;border-radius:inherit;padding:20px}
+.img-pending span{background:rgba(255,255,255,.85);padding:8px 16px;border-radius:999px}
+
+/* ---------- スタッフ個別ページ ---------- */
+.ar-1{aspect-ratio:1/1}
+.staff-detail{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
+.staff-detail__photo{position:sticky;top:100px}
+.clean-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.clean-list li{position:relative;padding-left:22px;line-height:1.9}
+.clean-list li::before{content:"";position:absolute;left:4px;top:13px;width:8px;height:8px;border-radius:50%;background:var(--c-primary)}
+.staff-detail .h3{color:var(--c-primary-dd);border-bottom:2px solid var(--c-primary-soft);padding-bottom:8px}
+@media(max-width:760px){
+  .staff-detail{grid-template-columns:1fr;gap:32px}
+  .staff-detail__photo{position:static;max-width:280px;margin:0 auto}
+}
+
+/* スタッフカードのリンク化 */
+.card-link{transition:transform .2s ease,box-shadow .2s ease;cursor:pointer}
+.card-link:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.staff-more{display:inline-block;color:var(--c-primary-dd);font-weight:700;font-size:14px;font-family:var(--font-en)}
+.card-link:hover .staff-more{text-decoration:underline}
+
+/* ---------- 横スクロールギャラリー（施設・設備） ---------- */
+.tag--lg{font-size:15px;padding:10px 18px;border-radius:999px}
+.hscroll{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;padding:4px 4px 16px;scrollbar-width:thin}
+.hscroll__item{flex:0 0 280px;margin:0;scroll-snap-align:start}
+.hscroll__item figcaption{margin-top:8px;font-size:13px;color:var(--c-ink-2);text-align:center;font-weight:600}
+.hscroll::-webkit-scrollbar{height:8px}
+.hscroll::-webkit-scrollbar-thumb{background:var(--c-primary-soft);border-radius:999px}
+.hscroll::-webkit-scrollbar-track{background:transparent}
+@media(max-width:600px){.hscroll__item{flex-basis:240px}}
