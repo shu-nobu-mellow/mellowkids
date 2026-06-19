@@ -68,7 +68,6 @@
     { key: 'about',    label: '事業所について', href: 'about.html' },
     { key: 'program',  label: '療育プログラム', href: 'program.html' },
     { key: 'flow',     label: 'ご利用の流れ',   href: 'flow.html' },
-    { key: 'price',    label: '料金・対象',     href: 'price.html' },
     { key: 'staff',    label: 'スタッフ',       href: 'staff.html' },
     { key: 'facility', label: '施設・設備',     href: 'facility.html' },
     { key: 'access',   label: 'アクセス',       href: 'access.html' },
@@ -80,7 +79,7 @@
   var MARK_W = '<span class="mark"><img src="logo-mark-white.png" alt="" width="110" height="87"></span>';
 
   var brand = '<a class="brand" href="index.html">' + MARK
-    + '<span class="name"><img class="wm-img" src="wm-solid-aqua.png" alt="メロウキッズ ホーム"><small>MELLOW KIDS</small></span></a>';
+    + '<span class="name"><img class="wm-img" src="wm-solid-blue.png" alt="メロウキッズ ホーム"><small>MELLOW KIDS</small></span></a>';
 
   function navLinks(cls) {
     return NAV.map(function (n) {
@@ -127,7 +126,7 @@
       + '</div></div>'
       + '<div><h4>サービス</h4><div class="foot-links">'
       + '<a href="about.html">事業所について</a><a href="program.html">療育プログラム</a>'
-      + '<a href="flow.html">ご利用の流れ</a><a href="price.html">料金・対象</a></div></div>'
+      + '<a href="flow.html">ご利用の流れ</a><a href="flow.html#price">料金・対象</a></div></div>'
       + '<div><h4>事業所情報</h4><div class="foot-links">'
       + '<a href="staff.html">スタッフ紹介</a><a href="facility.html">施設・設備</a>'
       + '<a href="access.html">アクセス</a><a href="news.html">お知らせ・ブログ</a></div></div>'

@@ -355,3 +355,11 @@ main p a:not(.btn){text-decoration:underline;text-underline-offset:3px}
 .hscroll::-webkit-scrollbar-thumb{background:var(--c-primary-soft);border-radius:999px}
 .hscroll::-webkit-scrollbar-track{background:transparent}
 @media(max-width:600px){.hscroll__item{flex-basis:240px}}
+
+/* ---------- お問い合わせCTAブロック：スマホ・小型タブレットで縦積み＆ボタン全幅 ---------- */
+@media(max-width:820px){
+  .flow-note{flex-direction:column;align-items:stretch !important;text-align:center;gap:14px !important}
+  .flow-note > p{margin:0;width:100%}
+  .flow-note .feature-ic{align-self:center}
+  .flow-note .btn{margin-left:0 !important;width:100%;justify-content:center;min-height:48px}
+}
