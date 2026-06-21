@@ -68,8 +68,7 @@
     { key: 'about',    label: '事業所について', href: 'about.html' },
     { key: 'program',  label: '療育プログラム', href: 'program.html' },
     { key: 'flow',     label: 'ご利用の流れ',   href: 'flow.html' },
-    { key: 'staff',    label: 'スタッフ',       href: 'staff.html' },
-    { key: 'facility', label: '施設・設備',     href: 'facility.html' },
+    { key: 'staff',    label: 'スタッフ・施設', href: 'staff.html' },
     { key: 'access',   label: 'アクセス',       href: 'access.html' },
     { key: 'news',     label: 'お知らせ',       href: 'news.html' },
     { key: 'recruit',  label: '採用情報',       href: 'recruit.html' },
@@ -129,7 +128,7 @@
       + '<a href="about.html">事業所について</a><a href="program.html">療育プログラム</a>'
       + '<a href="flow.html">ご利用の流れ</a><a href="flow.html#price">料金・対象</a></div></div>'
       + '<div><h4>事業所情報</h4><div class="foot-links">'
-      + '<a href="staff.html">スタッフ紹介</a><a href="facility.html">施設・設備</a>'
+      + '<a href="staff.html">スタッフ紹介</a><a href="staff.html#facility">施設・設備</a>'
       + '<a href="access.html">アクセス</a><a href="news.html">お知らせ・ブログ</a></div></div>'
       + '<div><h4>お問い合わせ</h4><div class="foot-links">'
       + '<a href="contact.html">見学・体験予約</a><a href="tel:0997-58-5511">TEL 0997-58-5511</a>'
