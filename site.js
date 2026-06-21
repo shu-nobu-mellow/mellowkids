@@ -72,6 +72,7 @@
     { key: 'facility', label: '施設・設備',     href: 'facility.html' },
     { key: 'access',   label: 'アクセス',       href: 'access.html' },
     { key: 'news',     label: 'お知らせ',       href: 'news.html' },
+    { key: 'recruit',  label: '採用情報',       href: 'recruit.html' },
   ];
   var current = document.body.getAttribute('data-page') || 'home';
 
