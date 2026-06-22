@@ -97,10 +97,6 @@ h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.45;margin
 .badge-open .seg--date{background:var(--c-accent-btn);color:#fff;font-family:var(--font-en);border-radius:0 var(--pill) var(--pill) 0}
 .badge-open .seg--date b{font-family:var(--font-head);font-size:1.15em}
 .badge-open .seg--recruit{background:#fff;color:var(--c-accent-d);font-family:var(--font-head)}
-@media (prefers-reduced-motion: no-preference){
-  .badge-open{animation:badge-bob 3.4s ease-in-out infinite}
-  @keyframes badge-bob{0%,100%{transform:rotate(-1.5deg) translateY(0)}50%{transform:rotate(-.6deg) translateY(-4px)}}
-}
 @media(max-width:560px){
   .badge-open{flex-direction:column;align-items:stretch;border-radius:20px;transform:rotate(-1deg)}
   .badge-open .seg{justify-content:center;padding:8px 16px}
